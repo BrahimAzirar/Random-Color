@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    min-height: 600px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: #EEE;
+}
+
+#root {
+    width: 100%;
+    height: 95%;
+}
+
+#root > div:first-child {
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, calc(95% / 5));
+    grid-template-rows: repeat(3, calc(95% / 3));
+    justify-content: center;
+    gap: 2.5% 1%;
+}
+
+#root > div:last-child {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#root > div:last-child button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: #6c5ce7;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#root > div:last-child button:hover {
+    background: #5d4dd4;
+}
+
+.ColorCard {
+    transition: .2s;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ColorCard:active {
+    transform: scale(.95);
+}
+
+.ColorCard div:first-child {
+    height: 85%;
+    border-radius: 5px;
+}
+
+.ColorCard div:last-child {
+    height: 15%;
+    text-align: center;
+}
