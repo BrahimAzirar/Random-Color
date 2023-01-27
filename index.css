@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -69,4 +70,55 @@ body {
 .ColorCard div:last-child {
     height: 15%;
     text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+
+@media only screen and (max-width: 400px) {
+    body {
+        min-width: 400px;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        padding: 5px;
+    }
+
+    #root {
+        height: 100%;
+    }
+
+    #root > div:first-child {
+        grid-template-columns: repeat(3, calc(90% / 3));
+        grid-template-rows: repeat(5, calc(90% / 5));
+        gap: calc(10% / 5) calc(10% / 3);
+    }
+
+    .ColorCard div:last-child {
+        font-size: .9rem;
+        font-weight: 700;
+        margin-top: 3px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+    body {
+        padding: 10px;
+    }
+
+    #root > div:first-child {
+        grid-template-columns: repeat(5, calc(90% / 5));
+        grid-template-rows: repeat(3, calc(90% / 3));
+        gap: calc(10% / 3) calc(10% / 5);
+    }
+
+    .ColorCard div:last-child {
+        font-size: 1rem;
+    }
 }
